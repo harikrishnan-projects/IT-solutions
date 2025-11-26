@@ -49,6 +49,7 @@ span{
   display:flex; 
   align-items:center; 
   gap:12px; 
+  margin-left: -5px;
   text-decoration:none; 
   color:inherit; 
 }
@@ -62,6 +63,7 @@ span{
 .brand-title { 
   display:flex; 
   flex-direction:column; 
+  margin-left: -10px;
   /* line-height:1.1rem;  */
 }
 .brand-title .title { 
@@ -302,8 +304,9 @@ span{
 
 .features-head h2 {
   margin: 8px 0 8px;
-  font-size: 26px;
-  color: rgb(226, 33, 28);
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px;
+  color:rgb(226, 33, 28);
 }
 
 .lead {
@@ -322,7 +325,7 @@ span{
 
 /* feature card */
 .feature {
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  background: rgb(244, 213, 213);
   border: 1px solid #eef4ff;
   border-radius: 12px;
   padding: 18px;
@@ -349,8 +352,8 @@ span{
 /* title & text */
 .feature h3 {
   margin: 0;
-  font-size: 16px;
-  color: rgb(226, 33, 28);
+  font-size:1.3rem;
+  color: black;
 }
 
 .feature p {
@@ -442,7 +445,8 @@ span{
 
 .workflow-head h2 {
   margin: 8px 0 8px;
-  font-size: 26px;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px;
   color:rgb(226, 33, 28);
 }
 
@@ -467,7 +471,7 @@ span{
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  background: rgb(242, 172, 169);
   border: 1px solid #eef4ff;
   border-radius: 12px;
   padding: 16px;
@@ -484,15 +488,15 @@ span{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: #f5fbff;
+  background: white;
   box-shadow: 0 6px 16px rgba(11, 78, 163, 0.03);
 }
 
 /* step heading */
 .step-body h3 {
   margin: 0;
-  font-size: 16px;
-  color: rgb(226, 33, 28);
+  font-size: 1.3rem;
+  color:black;
 }
 
 /* step text */

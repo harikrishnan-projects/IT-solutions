@@ -231,7 +231,7 @@ span{
 
 .fade {
   opacity: 0;
-  transition: opacity 0.8s;
+  transition: opacity 6s;
 }
 
 .fade.show {
@@ -243,7 +243,7 @@ span{
 .jump {
   transform: translateY(50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .jump.show {
@@ -256,7 +256,7 @@ span{
 .slide {
   transform: translateX(-50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .slide.show {
