@@ -229,7 +229,7 @@ span{
 
 .fade {
   opacity: 0;
-  transition: opacity 0.8s;
+  transition: opacity 6s;
 }
 
 .fade.show {
@@ -241,7 +241,7 @@ span{
 .jump {
   transform: translateY(50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .jump.show {
@@ -254,7 +254,7 @@ span{
 .slide {
   transform: translateX(-50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .slide.show {
@@ -269,182 +269,182 @@ span{
 
 
 
-
-
-
-
-/* FAQ Section Wrapper */
-.faq-section {
+/* Section wrapper */
+.achievements {
   padding: 28px;
-  background-color: #f8fafc;
-  border-top: 1px solid #e6edf3;
+}
+.achievements {
+  background-color: #ffffff;
+}
+.achievements {
+  border-top: 1px solid #eef2f6;
 }
 
-/* Container */
-.faq-container {
-  max-width: 920px;
+/* Inner container */
+.achievements-inner {
+  max-width: 1100px;
+}
+.achievements-inner {
   margin-left: auto;
   margin-right: auto;
+}
+.achievements-inner {
   padding-left: 16px;
   padding-right: 16px;
 }
 
 /* Title */
-.faq-title {
+.achievements-title {
   font-size: 22px;
-  line-height: 1.15;
-  margin-bottom: 6px;
+}
+.achievements-title {
   font-weight: 700;
-  color: #0f172a;
+}
+.achievements-title {
+  color: #0b1220;
+}
+.achievements-title {
+  margin-bottom: 6px;
 }
 
-/* Intro paragraph */
-.faq-intro {
-  margin-bottom: 18px;
+/* Intro text */
+.achievements-intro {
   font-size: 14px;
+}
+.achievements-intro {
   color: #475569;
 }
+.achievements-intro {
+  margin-bottom: 18px;
+}
 
-/* FAQ list wrapper */
-.faq-list {
-  display: block;
+/* Grid/list wrapper */
+.achievements-grid {
+  display: grid;
+}
+.achievements-grid {
+  grid-template-columns: 1fr;
+}
+.achievements-grid {
   gap: 12px;
 }
-
-/* Individual FAQ item (details) */
-.faq-item {
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid #e6edf3;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
-}
-
-/* Remove default margin that some browsers add for details */
-.faq-item[open] {
-  padding-bottom: 16px;
-}
-
-/* Summary (question) */
-.faq-question {
+.achievements-grid {
   list-style: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 600;
-  color: #0f172a;
-  padding: 6px 0;
-  outline: none;
 }
-
-/* Hide marker for consistent custom styling */
-.faq-question::-webkit-details-marker {
-  display: none;
-}
-.faq-question::marker {
-  display: none;
-}
-
-/* Add a custom arrow (rotates when open) */
-.faq-question::after {
-  content: "";
-  font-family: "Font Awesome 5 Free", "Arial", sans-serif;
-  font-weight: 700;
-  transform: rotate(0deg);
-  transition: transform 0.18s ease;
-  font-size: 14px;
-  color: #475569;
-}
-
-/* Rotate arrow when details open */
-.faq-item[open] > .faq-question::after {
-  transform: rotate(180deg);
-}
-
-/* Answer container */
-.faq-answer {
-  margin-top: 10px;
-  padding-top: 6px;
-  border-top: 1px dashed #eef2f6;
-  animation: fadeIn 180ms ease-in;
-}
-
-/* Answer text */
-.faq-answer p {
+.achievements-grid {
+  padding: 0;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.55;
-  color: #334155;
 }
 
-/* Links inside answers */
-.faq-answer a {
-  text-decoration: underline;
-  font-weight: 600;
+/* Individual item */
+.achievement-item {
+  background-color: #f8fbff;
+}
+.achievement-item {
+  border: 1px solid #e6eef6;
+}
+.achievement-item {
+  border-radius: 10px;
+}
+.achievement-item {
+  padding: 14px;
+}
+.achievement-item {
+  box-shadow: 0 1px 2px rgba(2,6,23,0.03);
+}
+
+/* Meta row (number + label) */
+.achievement-meta {
+  display: flex;
+}
+.achievement-meta {
+  align-items: baseline;
+}
+.achievement-meta {
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Number */
+.achievement-number {
+  font-size: 20px;
+}
+.achievement-number {
+  font-weight: 800;
+}
+.achievement-number {
   color: #0b74ff;
 }
 
-/* Small animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Label next to number */
+.achievement-label {
+  font-size: 13px;
+}
+.achievement-label {
+  font-weight: 700;
+}
+.achievement-label {
+  color: #0f172a;
 }
 
-/* Accessibility: focus style for keyboard users */
-.faq-question:focus {
-  box-shadow: 0 0 0 3px rgba(11, 116, 255, 0.12);
-  border-radius: 6px;
+/* Description */
+.achievement-desc {
+  margin: 0;
+}
+.achievement-desc {
+  font-size: 14px;
+}
+.achievement-desc {
+  color: #334155;
+}
+.achievement-desc {
+  line-height: 1.5;
+}
+
+/* Subtle hover effect for desktop pointer users */
+.achievement-item:hover {
+  transform: translateY(-4px);
+}
+.achievement-item {
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 /* ---------- 768px media query (tablet and above) ---------- */
 @media (min-width: 768px) {
-  /* Slightly bigger section paddings */
-  .faq-section {
-    padding: 48px;
+  .achievements {
+    padding: 40px;
   }
 
-  /* Wider container */
-  .faq-container {
-    max-width: 1100px;
+  .achievements-inner {
+    max-width: 1200px;
   }
 
-  /* Larger title */
-  .faq-title {
-    font-size: 28px;
-    margin-bottom: 8px;
+  .achievements-title {
+    font-size: 26px;
   }
 
-  /* Increase question font size */
-  .faq-question {
-    font-size: 18px;
-  }
-
-  /* Increase answer font size */
-  .faq-answer p {
+  .achievements-intro {
     font-size: 15px;
   }
 
-  /* Layout two-column FAQ list when there are many items */
-  .faq-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  /* 3-column grid on wider screens */
+  .achievements-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Make details padding a bit larger on wider screens */
-  .faq-item {
-    padding: 16px 18px;
+  .achievement-item {
+    padding: 18px;
+  }
+
+  .achievement-number {
+    font-size: 22px;
+  }
+
+  .achievement-desc {
+    font-size: 15px;
   }
 }
+
 
 
 
@@ -457,198 +457,161 @@ span{
 
 
 /* Section wrapper */
-.tech-faqs {
-  padding: 24px;
+.awards-section {
+  padding: 26px;
 }
-.tech-faqs {
+.awards-section {
   background-color: #ffffff;
 }
-.tech-faqs {
-  border-top: 1px solid #edf2f7;
+.awards-section {
+  border-top: 1px solid #e8edf3;
 }
 
-/* Inner container */
-.tech-faqs-inner {
-  max-width: 980px;
+/* Container */
+.awards-inner {
+  max-width: 1150px;
+}
+.awards-inner {
   margin-left: auto;
   margin-right: auto;
+}
+.awards-inner {
   padding-left: 16px;
   padding-right: 16px;
 }
 
 /* Title */
-.tech-faqs-title {
-  font-size: 20px;
+.awards-title {
+  font-size: 22px;
 }
-.tech-faqs-title {
+.awards-title {
   font-weight: 700;
 }
-.tech-faqs-title {
+.awards-title {
   color: #0b1220;
 }
-.tech-faqs-title {
+.awards-title {
   margin-bottom: 6px;
 }
 
 /* Intro */
-.tech-faqs-intro {
+.awards-intro {
   font-size: 14px;
 }
-.tech-faqs-intro {
+.awards-intro {
   color: #475569;
 }
-.tech-faqs-intro {
-  margin-bottom: 16px;
+.awards-intro {
+  margin-bottom: 18px;
 }
 
-/* List container */
-.tech-faqs-list {
-  display: block;
-  gap: 12px;
+/* Awards Grid */
+.awards-grid {
+  display: grid;
+}
+.awards-grid {
+  grid-template-columns: 1fr;
+}
+.awards-grid {
+  gap: 14px;
 }
 
-/* Individual FAQ (details) */
-.tech-faq {
+/* Item */
+.award-item {
   background-color: #f8fafc;
 }
-.tech-faq {
-  border: 1px solid #e6eef6;
+.award-item {
+  border: 1px solid #e4edf6;
 }
-.tech-faq {
-  border-radius: 8px;
+.award-item {
+  border-radius: 10px;
 }
-.tech-faq {
-  padding: 12px 14px;
+.award-item {
+  padding: 18px;
 }
-.tech-faq {
-  margin-bottom: 12px;
+.award-item {
+  text-align: center;
+}
+.award-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.award-item:hover {
+  transform: translateY(-4px);
 }
 
-/* Keep more padding when open for visual balance */
-.tech-faq[open] {
-  padding-bottom: 16px;
+/* Icon */
+.award-icon {
+  font-size: 32px;
+}
+.award-icon {
+  margin-bottom: 10px;
 }
 
-/* Summary (question) */
-.tech-q {
-  display: flex;
-}
-.tech-q {
-  justify-content: space-between;
-}
-.tech-q {
-  align-items: center;
-}
-.tech-q {
+/* Award name */
+.award-name {
   font-size: 16px;
 }
-.tech-q {
-  font-weight: 600;
+.award-name {
+  font-weight: 700;
 }
-.tech-q {
-  color: #071124;
+.award-name {
+  margin-bottom: 8px;
 }
-.tech-q {
-  cursor: pointer;
-}
-.tech-q {
-  padding: 6px 0;
+.award-name {
+  color: #0f172a;
 }
 
-/* Hide default marker */
-.tech-q::-webkit-details-marker {
-  display: none;
-}
-.tech-q::marker {
-  display: none;
-}
-
-/* Custom arrow after summary */
-.tech-q::after {
-  content: "▾";
-  display: inline-block;
+/* Description */
+.award-desc {
   font-size: 14px;
-  transform: rotate(0deg);
-  transition: transform 0.18s ease;
-  color: #475569;
 }
-
-/* Rotate when open */
-.tech-faq[open] > .tech-q::after {
-  transform: rotate(180deg);
+.award-desc {
+  color: #334155;
 }
-
-/* Answer */
-.tech-a {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px dashed #e6eef6;
-  animation: tfade 160ms ease-in;
+.award-desc {
+  line-height: 1.5;
 }
-
-/* Answer text */
-.tech-a p {
+.award-desc {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #253244;
 }
 
-/* Small animation */
-@keyframes tfade {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Focus style for keyboard users */
-.tech-q:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(11, 116, 255, 0.12);
-  border-radius: 6px;
-}
-
-/* ---------- 768px media query (tablet and above) ---------- */
+/* ---------- 768px MEDIA QUERY ---------- */
 @media (min-width: 768px) {
-  .tech-faqs {
+  .awards-section {
     padding: 40px;
   }
 
-  .tech-faqs-inner {
-    max-width: 1180px;
-  }
-
-  .tech-faqs-title {
+  .awards-title {
     font-size: 26px;
   }
 
-  .tech-faqs-intro {
+  .awards-intro {
     font-size: 15px;
   }
 
-  .tech-faqs-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+  /* 3 Columns on tablet/desktop */
+  .awards-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .tech-faq {
-    padding: 16px 18px;
+  .award-item {
+    padding: 22px;
   }
 
-  .tech-q {
+  .award-name {
     font-size: 17px;
   }
 
-  .tech-a p {
+  .award-desc {
     font-size: 15px;
   }
 }
+
+
+
+
+
+
 
 
 

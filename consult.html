@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc remove logo.webp">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="./consult.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Your Company</a>
+      <nav class="main-nav" aria-label="Top Navigation">
+        <a href="./index.html">Home</a>
+        <!-- <a href="/services">Services</a>
+        <a href="/contact">Contact</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Get a Free Consultation</h1>
+          <p class="hero-sub">Speak to our solutions architects for tailored cloud, security, and software strategies. We'll suggest the fastest path to impact — without vendor lock-in.</p>
+          <ul class="hero-list" aria-hidden="false">
+            <li>Free 30-minute discovery call</li>
+            <li>Custom roadmap & cost estimate</li>
+            <li>Security & compliance review</li>
+          </ul>
+        </div>
+
+        <aside class="hero-cta">
+          <div class="contact-card">
+            <h2 class="card-title">Quick Contact</h2>
+            <p class="card-desc">Prefer a direct call? Share details and preferred time. We'll reach out.</p>
+            <p class="card-phone">Call us: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p class="card-email">Email: <a href="mailto:consult@yourcompany.com">consult@yourcompany.com</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Main content: Form + Info -->
+    <section class="consult-section">
+      <div class="container consult-grid">
+
+        <!-- Form column -->
+        <article class="consult-form-col">
+          <h2 class="section-title">Request Consultation</h2>
+          <p class="section-desc">Fill in the form and our specialist will contact you to schedule a discovery call.</p>
+
+          <form class="consult-form" action="#" method="post" aria-labelledby="consultation-heading" novalidate>
+            <!-- Name -->
+            <div class="form-row">
+              <label class="label" for="name">Full name</label>
+              <input class="input" id="name" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+            </div>
+
+            <!-- Company -->
+            <div class="form-row">
+              <label class="label" for="company">Company</label>
+              <input class="input" id="company" name="company" type="text" placeholder="Company name" autocomplete="organization">
+            </div>
+
+            <!-- Email + Phone inline on wide screens -->
+            <div class="form-row double">
+              <div class="col">
+                <label class="label" for="email">Email</label>
+                <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+              </div>
+              <div class="col">
+                <label class="label" for="phone">Phone</label>
+                <input class="input" id="phone" name="phone" type="tel" placeholder="+1 234 567 890" autocomplete="tel">
+              </div>
+            </div>
+
+            <!-- Service select -->
+            <div class="form-row">
+              <label class="label" for="service">Preferred service</label>
+              <select class="select" id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Cloud Migration</option>
+                <option>Cybersecurity Assessment</option>
+                <option>Custom Software</option>
+                <option>Managed IT / Support</option>
+                <option>DevOps & Automation</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-row">
+              <label class="label" for="message">Tell us about your challenge</label>
+              <textarea class="textarea" id="message" name="message" rows="5" placeholder="Brief description, current stack, timeline, budget..."></textarea>
+            </div>
+
+            <!-- Preferred time -->
+            <div class="form-row">
+              <label class="label" for="time">Preferred time for call</label>
+              <input class="input" id="time" name="time" type="text" placeholder="e.g., Weekdays 10:00–13:00 (IST)">
+            </div>
+
+            <!-- Privacy -->
+            <div class="form-row small-note">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">I agree to be contacted. We never share your details with third parties.</label>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-row">
+              <button class="btn" type="submit">Request consultation</button>
+
+            </div>
+          </form>
+        </article>
+
+        <!-- Info column -->
+        <aside class="consult-info-col" aria-label="Why consult with us">
+          <div class="info-block">
+            <h3 class="info-title">Why consult with us?</h3>
+            <ul class="info-list">
+              <li>Experienced architects with enterprise and startup expertise.</li>
+              <li>Actionable roadmap within 7 business days.</li>
+              <li>Security-first approach and regulatory alignment.</li>
+              <li>Cost-optimised cloud & licensing guidance.</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-title">What to expect</h3>
+            <ol class="info-list">
+              <li>Intro call & discovery</li>
+              <li>Architecture review & gap analysis</li>
+              <li>Customized proposal & roadmap</li>
+            </ol>
+          </div>
+
+          <div class="info-block testimonials">
+            <h3 class="info-title">Client feedback</h3>
+            <blockquote class="quote">"Their discovery session highlighted gaps we didn't know existed — saved months of work." — <cite>CTO, FinTech</cite></blockquote>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Small FAQ -->
+    <section class="mini-faq">
+      <div class="container">
+        <h3 class="mini-title">FAQ</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-q">Is the consultation really free?</summary>
+            <div class="faq-a"><p>Yes — our initial 30-minute discovery call is free and non-obligatory.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">How long before we get a roadmap?</summary>
+            <div class="faq-a"><p>Typical turnaround is 5–10 business days depending on scope.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./consult.js"></script>
+</body>
+</html>

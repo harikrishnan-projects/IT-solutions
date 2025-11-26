@@ -1,0 +1,333 @@
+/* Basic reset for predictable rendering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container utility */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+/* Site header */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eef2f6;
+  padding: 12px 0;
+}
+
+/* Brand */
+.brand {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0b1220;
+  text-decoration: none;
+}
+
+/* Main nav (hidden on small screens) */
+.main-nav {
+  display: none;
+}
+.main-nav a {
+  text-decoration: none;
+  margin-left: 14px;
+  color: #0b1220;
+  background-color: rgb(226, 33, 28);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Hero */
+.hero {
+  padding: 26px 0;
+  background: linear-gradient(180deg,#f8fbff,#ffffff);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: start;
+}
+.hero-copy {
+  padding-right: 0;
+}
+.hero-title {
+  font-size: 26px;
+  margin: 0 0 8px 0;
+}
+.hero-sub {
+  margin: 0 0 12px 0;
+  color: #475569;
+  font-size: 14px;
+}
+.hero-list {
+  list-style: disc;
+  margin: 12px 0 0 18px;
+}
+.hero-cta {
+  margin-top: 16px;
+}
+
+/* Contact card */
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #e6eef6;
+  padding: 14px;
+}
+.card-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.card-desc {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+.card-phone a {
+  color: #0b74ff;
+  text-decoration: none;
+}
+.card-email a {
+  color: #0b74ff;
+  text-decoration: none;
+}
+
+/* Consult section */
+.consult-section {
+  padding: 28px 0;
+}
+.consult-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.consult-form-col {
+  padding-right: 0;
+}
+.section-title {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+}
+.section-desc {
+  margin: 0 0 16px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Form elements */
+.consult-form {
+  display: block;
+  width: 100%;
+}
+.form-row {
+  margin-bottom: 14px;
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #243240;
+}
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbe7f1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  outline: none;
+}
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbe7f1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  outline: none;
+}
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbe7f1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Double column form row (adapts on wide screens) */
+.form-row.double {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.form-row.double .col {
+  padding-right: 0;
+}
+
+/* Small note and consent checkbox */
+.small-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.small-note input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #0b74ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Info column */
+.consult-info-col {
+  margin-top: 22px;
+}
+.info-block {
+  background-color: #f8fafc;
+  border: 1px solid #e6eef6;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.info-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.info-list {
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+.info-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Testimonials block */
+.quote {
+  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+}
+.quote cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Mini FAQ */
+.mini-faq {
+  padding: 18px 0;
+}
+.mini-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+.faq-list details {
+  background-color: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  padding: 18px 0;
+  border-top: 1px solid #eef2f6;
+}
+.site-footer p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Focus states */
+.input:focus, .textarea:focus, .select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11,116,255,0.12);
+  border-radius: 6px;
+}
+
+/* ---------- 768px media query (tablet & desktop) ---------- */
+@media (min-width: 768px) {
+  .main-nav {
+    display: block;
+  }
+
+  .hero-inner {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .hero-cta {
+    margin-top: 0;
+  }
+
+  .consult-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  .consult-form-col {
+    padding-right: 14px;
+  }
+
+  .consult-info-col {
+    margin-top: 0;
+  }
+
+  .form-row.double {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .info-title {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
