@@ -47,6 +47,14 @@ body {
   padding-left: 8px;
 }
 
+.auth-brand div button{
+  background-color: rgb(226, 33, 28);
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: white;
+}
+
 .logo {
   width: 64px;
   height: 64px;
@@ -64,6 +72,7 @@ body {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
+  color: rgb(226, 33, 28);
 }
 
 .brand-lead {
@@ -104,14 +113,14 @@ body {
 
 .tab.active {
   background: #eef2ff;
-  color: #3730a3;
+  color: rgb(226, 33, 28);
 }
 
 /* banner */
 .error-banner {
-  background-color: #fff5f5;
+  background-color: rgb(226, 33, 28);
   border: 1px solid #fecaca;
-  color: #b91c1c;
+  color: white;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 12px;
@@ -191,7 +200,7 @@ input:focus {
 }
 
 .btn.primary {
-  background-color: #4f46e5;
+  background-color: rgb(226, 33, 28);
   color: #fff;
 }
 
