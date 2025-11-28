@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Solutions Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="app">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="brand">
+          <div class="logo">IT</div>
+          <div class="brand-text">
+            <h1 class="brand-title">IT Solutions</h1>
+            <div class="brand-sub">Admin Dashboard</div>
+          </div>
+        </div>
+
+        <ul class="nav" role="navigation">
+          <li><a class="nav-link active" href="#">Overview</a></li>
+          <li><a class="nav-link" href="#">Projects</a></li>
+          <li><a class="nav-link" href="#">Tickets</a></li>
+          <li><a class="nav-link" href="#">Clients</a></li>
+          <li><a class="nav-link" href="#">Settings</a></li>
+        </ul>
+
+        <div class="signed-in">Signed in as <strong>Admin</strong></div>
+      </aside>
+
+      <!-- MAIN COLUMN -->
+      <main class="main-wrap">
+
+        <header class="topbar">
+          <div class="top-left">
+            <div class="search" role="search">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M21 21l-4.35-4.35" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="11" cy="11" r="6" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+              </svg>
+              <input class="search-input" type="search" placeholder="Search projects, tickets..." aria-label="Search" />
+            </div>
+            <div class="page-title">Overview</div>
+          </div>
+
+          <div class="actions">
+            <button class="btn ghost" type="button">Notifications</button>
+            <button class="btn primary" type="button">New Project</button>
+          </div>
+        </header>
+
+        <!-- KPI CARDS -->
+        <section class="grid">
+          <div class="card">
+            <h3 class="card-title">Active Projects</h3>
+            <p class="stat">18</p>
+            <p class="muted">Last 30 days</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Open Tickets</h3>
+            <p class="stat">42</p>
+            <p class="muted">Needs attention</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">New Leads</h3>
+            <p class="stat">7</p>
+            <p class="muted">This week</p>
+          </div>
+        </section>
+
+        <!-- Widgets -->
+        <section class="widgets">
+          <div class="card">
+            <h3 class="card-title">System Health</h3>
+            <div class="chart">Chart placeholder — integrate chart library here</div>
+
+            <h3 class="card-title small">Recent Deployments</h3>
+            <table class="simple-table" role="table">
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CRM Revamp</td>
+                  <td>Success</td>
+                  <td>Nov 18, 2025</td>
+                </tr>
+                <tr>
+                  <td>Billing API</td>
+                  <td>Failed</td>
+                  <td>Nov 20, 2025</td>
+                </tr>
+                <tr>
+                  <td>Analytics</td>
+                  <td>Success</td>
+                  <td>Nov 21, 2025</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Today's Tasks</h3>
+            <div class="tasks">
+              <div class="task">
+                <div class="task-title">Fix login bug</div>
+                <div class="task-meta">In progress</div>
+              </div>
+              <div class="task">
+                <div class="task-title">Approve PR #234</div>
+                <div class="task-meta">Review</div>
+              </div>
+              <div class="task">
+                <div class="task-title">Client call — Acme</div>
+                <div class="task-meta">11:00 AM</div>
+              </div>
+            </div>
+
+            <div class="active-clients">
+              <h3 class="card-title small">Active Clients</h3>
+              <div class="clients-list">
+                <span class="client-pill">Acme</span>
+                <span class="client-pill">Byteworks</span>
+                <span class="client-pill">GreenOps</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-note">Tip: Replace the placeholder chart with a JS charting library and connect the table to your API for live data.</div>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

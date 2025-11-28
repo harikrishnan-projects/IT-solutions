@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auth — IT Solutions</title>
+  <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+  <div class="container">
+    <main class="auth-shell" aria-labelledby="auth-heading">
+      <header class="auth-brand">
+        <div class="logo">IT</div>
+        <div>
+          <h1 id="auth-heading" class="brand-title">IT Solutions</h1>
+          <p class="brand-lead">Manage projects, tickets and clients — sign in or create an account.</p>
+        </div>
+      </header>
+
+      <section class="auth-card" role="region" aria-label="Authentication">
+        <nav class="auth-tabs" role="tablist" aria-label="Authentication tabs">
+          <button class="tab active" data-target="signin" role="tab" aria-selected="true">Sign In</button>
+          <button class="tab" data-target="signup" role="tab" aria-selected="false">Sign Up</button>
+          <button class="tab" data-target="forgot" role="tab" aria-selected="false">Forgot Password</button>
+        </nav>
+
+        <div id="errorBanner" class="error-banner" role="alert" aria-live="polite" hidden></div>
+
+        <!-- Sign In -->
+        <form id="signin" class="auth-form show" novalidate>
+          <h2 class="form-title">Sign In</h2>
+          <p class="form-desc">Enter your credentials to access the dashboard.</p>
+
+          <div class="form-row">
+            <label for="si-email">Email</label>
+            <input id="si-email" type="email" autocomplete="email" required />
+            <div class="field-error" id="si-email-err"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="si-pass">Password</label>
+            <input id="si-pass" type="password" autocomplete="current-password" required />
+            <div class="field-error" id="si-pass-err"></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Sign In</button>
+            <button type="button" class="btn ghost" data-demo="signin">Fill Demo</button>
+            <a class="link right" href="#" data-switch="forgot">Forgot password?</a>
+          </div>
+        </form>
+
+        <!-- Sign Up -->
+        <form id="signup" class="auth-form" novalidate>
+          <h2 class="form-title">Sign Up</h2>
+          <p class="form-desc">Create a new account to get started.</p>
+
+          <div class="form-row">
+            <label for="su-email">Email</label>
+            <input id="su-email" type="email" autocomplete="email" required />
+            <div class="field-error" id="su-email-err"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="su-pass">Password</label>
+            <input id="su-pass" type="password" autocomplete="new-password" required />
+            <div class="field-error" id="su-pass-err"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="su-confirm">Confirm Password</label>
+            <input id="su-confirm" type="password" autocomplete="new-password" required />
+            <div class="field-error" id="su-confirm-err"></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Sign Up</button>
+            <button type="button" class="btn ghost" data-demo="signup">Fill Demo</button>
+            <a class="link right" href="#" data-switch="signin">Already have an account?</a>
+          </div>
+        </form>
+
+        <!-- Forgot -->
+        <form id="forgot" class="auth-form" novalidate>
+          <h2 class="form-title">Forgot Password</h2>
+          <p class="form-desc">Enter your email and we'll send reset instructions.</p>
+
+          <div class="form-row">
+            <label for="fo-email">Email</label>
+            <input id="fo-email" type="email" autocomplete="email" required />
+            <div class="field-error" id="fo-email-err"></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send Reset Link</button>
+            <button type="button" class="btn ghost" data-switch="signin">Back to Sign In</button>
+          </div>
+        </form>
+
+        <div class="auth-footer">By continuing you agree to the <a class="link" href="#">terms</a>.</div>
+      </section>
+    </main>
+  </div>
+
+<script>
+(function () {
+  // Helpers
+  function $(sel, ctx=document) { return ctx.querySelector(sel); }
+  function $all(sel, ctx=document) { return Array.from(ctx.querySelectorAll(sel)); }
+
+  // Elements
+  const tabs = $all('.tab');
+  const forms = $all('.auth-form');
+  const errorBanner = $('#errorBanner');
+
+  // Tab switching
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.target;
+      // update tab active state
+      tabs.forEach(t => { t.classList.toggle('active', t === tab); t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+      // show target form
+      forms.forEach(f => {
+        if (f.id === target) { f.classList.add('show'); f.removeAttribute('aria-hidden'); }
+        else { f.classList.remove('show'); f.setAttribute('aria-hidden','true'); }
+      });
+      // hide banner
+      hideBanner();
+    });
+  });
+
+  // Click links that switch forms
+  $all('[data-switch]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = el.dataset.switch;
+      // find tab and click
+      const tab = tabs.find(t => t.dataset.target === target);
+      if (tab) tab.click();
+    });
+  });
+
+  function showBanner(msg) {
+    errorBanner.hidden = false;
+    errorBanner.textContent = msg;
+  }
+  function hideBanner() {
+    errorBanner.hidden = true;
+    errorBanner.textContent = '';
+  }
+
+  // Basic validation utilities
+  function validEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  }
+
+  // Demo fill buttons
+  $all('[data-demo]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const which = btn.dataset.demo;
+      if (which === 'signin') {
+        $('#si-email').value = 'admin@example.com';
+        $('#si-pass').value = 'Password123';
+      } else if (which === 'signup') {
+        $('#su-email').value = 'newuser@example.com';
+        $('#su-pass').value = 'Password123';
+        $('#su-confirm').value = 'Password123';
+      }
+      hideBanner();
+    });
+  });
+
+  // Form submit handlers
+  // Signin
+  $('#signin').addEventListener('submit', function (e) {
+    e.preventDefault();
+    hideBanner();
+    $('#si-email-err').textContent = '';
+    $('#si-pass-err').textContent = '';
+
+    const email = $('#si-email').value.trim();
+    const pass = $('#si-pass').value;
+
+    let ok = true;
+    if (!validEmail(email)) { $('#si-email-err').textContent = 'Enter a valid email.'; ok = false; }
+    if (pass.length < 6) { $('#si-pass-err').textContent = 'Password must be at least 6 characters.'; ok = false; }
+
+    // Always show simulated server error banner; redirect only when client-side valid
+    showBanner('Server error: Unable to process sign in (simulated).');
+
+    if (ok) {
+      // If you want a delay to show banner before redirect, replace immediate redirect with setTimeout
+      // Example: setTimeout(() => window.location.href = '404.html', 800);
+      window.location.href = '404.html';
+    }
+  });
+
+  // Signup
+  $('#signup').addEventListener('submit', function (e) {
+    e.preventDefault();
+    hideBanner();
+    $('#su-email-err').textContent = '';
+    $('#su-pass-err').textContent = '';
+    $('#su-confirm-err').textContent = '';
+
+    const email = $('#su-email').value.trim();
+    const pass = $('#su-pass').value;
+    const conf = $('#su-confirm').value;
+
+    let ok = true;
+    if (!validEmail(email)) { $('#su-email-err').textContent = 'Enter a valid email.'; ok = false; }
+    if (pass.length < 6) { $('#su-pass-err').textContent = 'Password must be at least 6 characters.'; ok = false; }
+    if (conf !== pass) { $('#su-confirm-err').textContent = 'Passwords do not match.'; ok = false; }
+
+    showBanner('Server error: Unable to create account (simulated).');
+
+    if (ok) {
+      window.location.href = '404.html';
+    }
+  });
+
+  // Forgot
+  $('#forgot').addEventListener('submit', function (e) {
+    e.preventDefault();
+    hideBanner();
+    $('#fo-email-err').textContent = '';
+
+    const email = $('#fo-email').value.trim();
+    if (!validEmail(email)) {
+      $('#fo-email-err').textContent = 'Enter a valid email.';
+      return;
+    }
+
+    // Show simulated server error; do not redirect (per earlier flows), but you can redirect if needed
+    showBanner('Server error: Unable to send reset link (simulated).');
+
+    // If you want to redirect on valid, uncomment below:
+    // window.location.href = '404.html';
+  });
+
+  // Initialize: ensure only Sign In visible
+  tabs[0].click();
+})();
+</script>
+</body>
+</html>

@@ -69,7 +69,10 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el))
 
 
 /* footer section's js code */
-document.addEventListener('DOMContentLoaded', () => {
-  const y = document.getElementById('alt-footer-year');
-  if (y) y.textContent = new Date().getFullYear();
-});
+// small script to update year in copyright
+  (function(){
+    var el = document.getElementById('copyright-year');
+    if (el) {
+      el.textContent = new Date().getFullYear();
+    }
+  })();

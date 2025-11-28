@@ -40,18 +40,22 @@
 
 
 
+/* intersection observer animation code */
 
-/* multiple animation js code */
-
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add('show');
+      // If you want animation to run only once:
+      observer.unobserve(entry.target);
     }
   });
 });
 
-document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
+document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el))
+
+
+
 
 
 
@@ -65,7 +69,10 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
 
 
 /* footer section's js code */
-document.addEventListener('DOMContentLoaded', () => {
-  const y = document.getElementById('alt-footer-year');
-  if (y) y.textContent = new Date().getFullYear();
-});
+// small script to update year in copyright
+  (function(){
+    var el = document.getElementById('copyright-year');
+    if (el) {
+      el.textContent = new Date().getFullYear();
+    }
+  })();
