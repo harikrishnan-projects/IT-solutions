@@ -158,7 +158,7 @@ a { text-decoration: none; }
 }
 .linkRight::-webkit-scrollbar { display: none; }
 
-/* links */
+ /* links */
 .linkRight a {
   color: black;
   padding: 10px 8px;
@@ -724,6 +724,51 @@ a { text-decoration: none; }
 
 
 
+
+/* ========== FORM VALIDATION MESSAGES ========== */
+
+/* Top form message */
+.form-message {
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: none;
+}
+.form-message.show {
+  display: block;
+}
+.form-message.error {
+  background: rgba(217,83,79,0.08);
+  color: #a33b36;
+}
+
+/* Inline error message */
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* Field error outline */
+.input.error,
+.select.error,
+.textarea.error {
+  outline: 2px solid #d9534f;
+  box-shadow: 0 0 0 3px rgba(217,83,79,0.06);
+  border-color: #d9534f;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Alternative footer styles - single-block selectors, no :root */
 
 /* alt-footer */
@@ -961,3 +1006,45 @@ a { text-decoration: none; }
     text-align: center;
   }
 }
+
+/* =========================
+   Validation & message UI
+   ========================= */
+
+/* Input error outline */
+.input.error,
+.select.error,
+.textarea.error,
+input.error[type="checkbox"] {
+  outline: 2px solid #d9534f;
+  box-shadow: 0 0 0 3px rgba(217,83,79,0.06);
+  border-color: #d9534f;
+}
+
+/* small inline error text */
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* top form messages (success / error) */
+.form-message {
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: none;
+}
+.form-message.show { display: block; }
+.form-message.success {
+  background: rgba(40,167,69,0.08);
+  color: #28632a;
+}
+.form-message.error {
+  background: rgba(217,83,79,0.08);
+  color: #a33b36;
+}
+
+/* Visually hide the browser default tooltip effect on invalid when using custom messages */
+input:invalid { box-shadow: none; }
