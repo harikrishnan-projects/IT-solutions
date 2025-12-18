@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,7 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: -15px;
+  background-color: white;
 }
 
 /* brand text */
@@ -93,19 +94,20 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
 .hamburger {
   display: none;
   background: transparent;
-  color: black;
-  border: 1px solid rgba(0,0,0,0.12);
+  color:white;
+  border: 1px solid white;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -160,13 +162,14 @@ a { text-decoration: none; }
 
 /* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -205,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -271,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -371,6 +375,7 @@ a { text-decoration: none; }
 
 
 
+
 /*== multiple animation css code ==*/
 
 .fade {
@@ -420,7 +425,7 @@ a { text-decoration: none; }
 .testimonials {
   font-family: Inter, system-ui, Arial, sans-serif;
   padding: 40px 18px;
-  background: #ffffff;
+  /* background: #ffffff; */
   color: #0f1724;
 }
 
@@ -439,7 +444,7 @@ a { text-decoration: none; }
 .t-kicker {
   display: inline-block;
   background: #ffece5;
-  color: #c03b00;
+  color:rgb(7, 70, 91);
   padding: 6px 10px;
   font-size: 13px;
   border-radius: 999px;
@@ -450,14 +455,14 @@ a { text-decoration: none; }
 .t-head h2 {
   margin: 10px 0;
   font-size: 26px;
-  color: #0b3b78;
+  color:white;
 }
 
 /* Lead text */
 .t-lead {
   margin: 0;
   font-size: 15px;
-  color: #55606b;
+  color: white;
 }
 
 /* Grid layout */
@@ -470,7 +475,7 @@ a { text-decoration: none; }
 
 /* Card */
 .t-card {
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  background: rgb(210, 231, 238);
   border: 1px solid #eef4ff;
   border-radius: 12px;
   padding: 18px;
@@ -501,21 +506,21 @@ a { text-decoration: none; }
 .t-body h3 {
   margin: 0;
   font-size: 16px;
-  color: #0b4ea3;
+  color: black;
 }
 
 /* Role text */
 .role {
   margin: 4px 0;
   font-size: 13px;
-  color: #75828d;
+  color: black;
 }
 
 /* Review text */
 .review {
   margin: 6px 0;
   font-size: 14px;
-  color: #374151;
+  color:rgb(8, 57, 73);
   line-height: 1.45;
 }
 
@@ -570,7 +575,7 @@ a { text-decoration: none; }
 .case-studies {
   font-family: Inter, system-ui, Arial, sans-serif;
   color: #0f1724;
-  background: #ffffff;
+  /* background: #ffffff; */
   padding: 40px 18px;
 }
 
@@ -597,12 +602,12 @@ a { text-decoration: none; }
 .cs-head h2 {
   margin: 8px 0 8px;
   font-size: 26px;
-  color: #0b3b78;
+  color:rgb(170, 211, 225);
 }
 
 .cs-lead {
   margin: 0;
-  color: #55606b;
+  color:white;
   font-size: 15px;
 }
 
@@ -616,7 +621,7 @@ a { text-decoration: none; }
 
 /* card */
 .case-card {
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  background: rgb(221, 244, 252);
   border: 1px solid #eef4ff;
   border-radius: 12px;
   padding: 18px;
@@ -643,8 +648,8 @@ a { text-decoration: none; }
 
 /* badge */
 .cs-badge {
-  background: #f5f8ff;
-  color: #0b4ea3;
+  /* background: #f5f8ff; */
+  color: rgb(7, 36, 46);
   padding: 6px 10px;
   border-radius: 999px;
   font-weight: 700;
@@ -655,13 +660,13 @@ a { text-decoration: none; }
 .case-card h3 {
   margin: 0;
   font-size: 15px;
-  color: #0b4ea3;
+  color: black;
 }
 
 /* paragraph text */
 .cs-text {
   margin: 6px 0 0 0;
-  color: #374151;
+  color: black;
   font-size: 14px;
   line-height: 1.45;
 }
@@ -672,11 +677,11 @@ a { text-decoration: none; }
   flex-direction: column;
   gap: 6px;
   padding: 10px;
-  background: #f8fbff;
+  background: rgb(26, 85, 105);
   border-radius: 8px;
   border: 1px dashed #e8f2ff;
   font-size: 14px;
-  color: #0f1724;
+  color: white;
 }
 
 /* achievements */
@@ -688,8 +693,8 @@ a { text-decoration: none; }
 }
 
 .cs-achieve span {
-  background: #eef8f3;
-  color: #0a6b2f;
+  /* background: #eef8f3; */
+  color: rgb(32, 31, 31);
   padding: 6px 8px;
   border-radius: 8px;
   font-weight: 700;
@@ -750,7 +755,7 @@ a { text-decoration: none; }
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -882,7 +887,7 @@ a { text-decoration: none; }
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -894,6 +899,7 @@ a { text-decoration: none; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */

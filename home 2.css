@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,7 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: -15px;
+  background-color: white;
 }
 
 /* brand text */
@@ -93,19 +94,20 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
 .hamburger {
   display: none;
   background: transparent;
-  color: black;
-  border: 1px solid rgba(0,0,0,0.12);
+  color:white;
+  border: 1px solid white;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -160,13 +162,14 @@ a { text-decoration: none; }
 
 /* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -205,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -271,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -369,6 +373,13 @@ a { text-decoration: none; }
 .linkRight::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius: 3px; }
 
 
+
+
+
+
+
+
+
 /*== multiple animation css code ==*/
 
 .fade {
@@ -420,7 +431,7 @@ a { text-decoration: none; }
   system-ui, -apple-system, "Segoe UI", Roboto, Arial; 
   color:#0f1724;
   /* background:rgb(226, 33, 28); */
-  background:rgb(243, 163, 161);
+  /* background:rgb(243, 163, 161); */
   padding:70px 20px
 }
 
@@ -453,12 +464,12 @@ h1{
   margin:8px 0 12px;
   font-size:36px;
   line-height:1.04;
-  color:black;
+  color:rgb(170, 211, 225);
 }
 
 .sub{
   margin:0 0 18px;
-  color:BLACK;
+  color:white;
   font-size:16px;
   max-width:60ch
 }
@@ -482,14 +493,14 @@ h1{
 }
 
 .btn-primary{
-  background:rgb(226, 33, 28);
-  color:#fff;
-  border:2px solid rgb(226, 33, 28);
+  background:rgb(170, 211, 225) !important;
+  color:black !important;
+  border:2px solid rgb(170, 211, 225) !important;
 }
 .btn-outline{
   background:transparent;
-  color:rgb(226, 33, 28);
-  border:2px solid rgb(226, 33, 28);
+  color:black !important;
+  border:2px solid rgb(170, 211, 225) !important;
 }
 
 /* feature list */
@@ -508,7 +519,7 @@ h1{
   padding:8px 12px;
   border-radius:999px;
   border:1px solid #eef6ff;
-  color: rgb(226, 33, 28);
+  color: rgb(7, 61, 79);
   font-weight: bold;
 }
 
@@ -591,7 +602,7 @@ h1{
 .integrations {
   font-family: Inter, system-ui, Arial, sans-serif;
   color: #0f1724;
-  background: #ffffff;
+  /* background: #ffffff; */
   padding: 36px 18px;
 }
 
@@ -609,7 +620,7 @@ h1{
 /* kicker tag */
 .kicker {
   display: inline-block;
-  background: rgb(226, 33, 28);
+  /* background: rgb(226, 33, 28); */
   color: #ffffff;
   padding: 6px 10px;
   border-radius: 999px;
@@ -621,13 +632,13 @@ h1{
 .int-header h2 {
   margin: 8px 0 6px;
   font-size: 2rem;
-  color: rgb(226, 33, 28);
+  color: rgb(170, 211, 225);
 }
 
 /* sub text */
 .int-header .lead {
   margin: 0;
-  color: #000000;
+  color: white !important;
   font-size: 14px;
 }
 
@@ -648,7 +659,7 @@ h1{
   padding: 14px;
   border-radius: 10px;
   border: 1px solid #eef4ff;
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  background:rgb(226, 241, 247);
   box-shadow: 0 8px 20px rgba(12, 34, 84, 0.03);
   transition: transform 0.16s ease, box-shadow 0.16s ease;
   cursor: default;
@@ -669,7 +680,7 @@ h1{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: #f5fbff;
+  background: rgb(208, 225, 237);
   box-shadow: 0 6px 16px rgba(11, 78, 163, 0.03);
 }
 
@@ -677,7 +688,7 @@ h1{
 .int-body h3 {
   margin: 0;
   font-size: 16px;
-  color: rgb(226, 33, 28);
+  color: rgb(8, 76, 99);
 }
 
 /* card description */
@@ -707,14 +718,14 @@ h1{
 
 /* connect button */
 .btn-primary {
-  background: rgb(226, 33, 28);
+  /* background: rgb(226, 33, 28); */
   color: #ffffff;
-  border: 2px solid rgb(226, 33, 28);
+  /* border: 2px solid rgb(226, 33, 28); */
 }
 
 /* Docs link */
 .link {
-  color: rgb(226, 33, 28);
+  color:black;
   text-decoration: none;
   font-weight: 700;
   font-size: 13px;
@@ -735,7 +746,7 @@ h1{
 
 .note {
   margin: 0;
-  color: #55606b;
+  color:white;
   font-size: 14px;
 }
 
@@ -793,12 +804,12 @@ h1{
 
 
 /* Stats & Achievements Section */
-.stats{font-family:Inter, system-ui, Arial, sans-serif;color:#0f1724;background:rgb(226, 33, 28);padding:48px 18px}
+.stats{font-family:Inter, system-ui, Arial, sans-serif;color:#0f1724;background:rgb(170, 211, 225);padding:48px 18px}
 .container{max-width:1100px;margin:0 auto}
 .stats-header{margin-bottom:24px}
-.kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.stats-header h2{margin:8px 0 6px;font-size:2.5rem; color: white;}
-.lead{margin:0;color: white !important;font-size:15px}
+.kicker{display:inline-block;background:#eef8f3;color:rgb(7, 62, 81);padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.stats-header h2{margin:8px 0 6px;font-size:2.5rem; color: black;}
+.lead{margin:0;color: black !important;font-size:15px}
 
 /* Grid of stats */
 .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:18px}
@@ -808,8 +819,8 @@ h1{
   /* box-shadow:0 6px 20px rgba(12,34,84,0.05); */
   transition:transform .16s ease,box-shadow .16s ease;cursor:default;outline:none}
 .stat-card:focus{box-shadow:0 0 0 4px rgba(11,78,163,0.12)}
-.stat-number{font-size:36px;font-weight:800;color:white;margin:0}
-.stat-text{margin:6px 0 0;color:white;font-size:15px}
+.stat-number{font-size:36px;font-weight:800;color:black;margin:0}
+.stat-text{margin:6px 0 0;color:black;font-size:15px}
 
 /* subtle hover lift */
 @media (hover: hover){
@@ -836,12 +847,12 @@ h1{
 
 
 /* FAQ Section */
-.faq{font-family:Inter, system-ui, Arial, sans-serif;color:#0f1724;background:#fefefe;padding:48px 18px}
+.faq{font-family:Inter, system-ui, Arial, sans-serif;color:white;padding:48px 18px}
 .container{max-width:900px;margin:0 auto}
 .faq-header{margin-bottom:24px}
 .kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.faq-header h2{margin:8px 0 6px;font-size:2.5rem; color: rgb(226, 33, 28);}
-.lead{margin:0;color:#55606b;font-size:15px}
+.faq-header h2{margin:8px 0 6px;font-size:2.5rem; color: rgb(170, 211, 225);}
+.lead{margin:0;color:red;font-size:15px; font-weight: bold;}
 
 /* FAQ List / Accordion */
 .faq-list{display:flex;flex-direction:column;gap:12px}
@@ -849,7 +860,7 @@ h1{
 .faq-question{width:100%;text-align:left;padding:14px 18px;font-size:16px;font-weight:600;background:transparent;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;outline:none}
 .faq-question:focus{box-shadow:0 0 0 3px rgba(11,78,163,0.12)}
 .faq-toggle{font-size:20px;font-weight:700}
-.faq-answer{background-color: rgb(226, 33, 28);
+.faq-answer{background-color: rgb(10, 61, 78);
   display:none;padding:12px 18px;border-top:1px solid rgb(226, 33, 28);color:white;font-size:14px;line-height:1.5}
 
 /* Show answer when active */
@@ -918,23 +929,23 @@ h1{
 
 
 /* Product Showcase Section */
-.product-showcase{font-family:Inter, system-ui, Arial, sans-serif;color:#0f1724;background:#fefefe;padding:48px 18px}
+.product-showcase{font-family:Inter, system-ui, Arial, sans-serif;color:#0f1724;padding:48px 18px}
 .container{max-width:1100px;margin:0 auto}
 .showcase-header{margin-bottom:28px}
 .kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.showcase-header h2{margin:8px 0 8px;font-size: 2.5rem; color: rgb(226, 33, 28);}
-.lead{margin:0;color:#55606b;font-size:15px}
+.showcase-header h2{margin:8px 0 8px;font-size: 2.5rem; color: rgb(170, 211, 225);}
+.lead{margin:0;color:white;font-size:15px}
 
 /* Grid */
 .showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 
 /* Product Card */
-.product-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(12,34,84,0.06);transition:transform .16s ease,box-shadow .16s ease}
+.product-card{background:rgb(220, 237, 242);border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(12,34,84,0.06);transition:transform .16s ease,box-shadow .16s ease}
 .product-card img{width:30%;height:auto;display:block; margin-left: 85px;}
 .product-info{padding:14px 16px}
 .product-info h3{margin:0 0 6px;font-size:1.3rem;color:black}
 .product-info p{margin:0 0 10px;color:#374151;font-size:14px;line-height:1.4}
-.btn{display:inline-block;padding:8px 12px;background:rgb(226, 33, 28);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px}
+.btn{display:inline-block;padding:8px 12px;background:rgb(9, 80, 103);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px}
 @media (hover: hover){
   .product-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,34,84,0.08)}
 }
@@ -957,11 +968,12 @@ h1{
 
 
 
+
 /* Alternative footer styles - single-block selectors, no :root */
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -1093,7 +1105,7 @@ h1{
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -1105,6 +1117,7 @@ h1{
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */

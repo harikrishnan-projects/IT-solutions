@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,7 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: -15px;
+  background-color: white;
 }
 
 /* brand text */
@@ -93,19 +94,20 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
 .hamburger {
   display: none;
   background: transparent;
-  color: black;
-  border: 1px solid rgba(0,0,0,0.12);
+  color:white;
+  border: 1px solid white;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -160,13 +162,14 @@ a { text-decoration: none; }
 
 /* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -205,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -271,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -370,6 +374,7 @@ a { text-decoration: none; }
 
 
 
+
 /*== multiple animation css code ==*/
 
 .fade {
@@ -421,7 +426,7 @@ a { text-decoration: none; }
 /* FAQ Section Wrapper */
 .faq-section {
   padding: 28px;
-  background-color: #f8fafc;
+  /* background-color: #f8fafc; */
   border-top: 1px solid #e6edf3;
 }
 
@@ -440,14 +445,14 @@ a { text-decoration: none; }
   line-height: 1.15;
   margin-bottom: 6px;
   font-weight: 700;
-  color: #0f172a;
+  color:rgb(170, 211, 225);
 }
 
 /* Intro paragraph */
 .faq-intro {
   margin-bottom: 18px;
   font-size: 14px;
-  color: #475569;
+  color: white;
 }
 
 /* FAQ list wrapper */
@@ -458,9 +463,9 @@ a { text-decoration: none; }
 
 /* Individual FAQ item (details) */
 .faq-item {
-  background-color: white;
+  background-color: rgb(170, 211, 225);
   border-radius: 10px;
-  border: 1px solid #e6edf3;
+  /* border: 1px solid black; */
   padding: 12px 14px;
   margin-bottom: 12px;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
@@ -480,7 +485,7 @@ a { text-decoration: none; }
   justify-content: space-between;
   font-size: 16px;
   font-weight: 600;
-  color: #0f172a;
+  color:rgb(13, 67, 84);
   padding: 6px 0;
   outline: none;
 }
@@ -515,6 +520,7 @@ a { text-decoration: none; }
   padding-top: 6px;
   border-top: 1px dashed #eef2f6;
   animation: fadeIn 180ms ease-in;
+  background-color: rgb(170, 211, 225);
 }
 
 /* Answer text */
@@ -606,7 +612,7 @@ a { text-decoration: none; }
   padding: 24px;
 }
 .tech-faqs {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .tech-faqs {
   border-top: 1px solid #edf2f7;
@@ -629,7 +635,7 @@ a { text-decoration: none; }
   font-weight: 700;
 }
 .tech-faqs-title {
-  color: #0b1220;
+  color: rgb(170, 211, 225);
 }
 .tech-faqs-title {
   margin-bottom: 6px;
@@ -640,7 +646,7 @@ a { text-decoration: none; }
   font-size: 14px;
 }
 .tech-faqs-intro {
-  color: #475569;
+  color: white;
 }
 .tech-faqs-intro {
   margin-bottom: 16px;
@@ -654,7 +660,7 @@ a { text-decoration: none; }
 
 /* Individual FAQ (details) */
 .tech-faq {
-  background-color: #f8fafc;
+  background-color: rgb(170, 211, 225);
 }
 .tech-faq {
   border: 1px solid #e6eef6;
@@ -807,7 +813,7 @@ a { text-decoration: none; }
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -939,7 +945,7 @@ a { text-decoration: none; }
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -951,6 +957,7 @@ a { text-decoration: none; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */
